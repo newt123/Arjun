@@ -1,0 +1,18 @@
+-->> Create the file /etc/yum.repos.d/perforce.repo, with the following content:
+
+[perforce]
+name=Perforce
+baseurl=http://package.perforce.com/yum/rhel/7/x86_64/
+enabled=1
+gpgcheck=1
+
+
+
+-->> rpm --import https://package.perforce.com/perforce.pubkey
+
+
+-->> yum install helix-p4d
+
+
+-->> /opt/perforce/sbin/configure-helix-p4d.sh
+
